@@ -1,0 +1,10 @@
+<h1> Pick a User to make a reservation for </h1>
+
+<%= form_tag('/login_submit', :method=>'post') do %>
+
+<%= select_tag "user_id", options_from_collection_for_select(@users, "id" ,"username") %>
+
+<%= submit_tag "Continue" %>
+<% end %>
+
+
